@@ -1,0 +1,8 @@
+# Bundle patch for dsh-titlebar-restart.
+#
+# The Desktop caption menubar (应用 / 编辑) is drawn by the Electron preload,
+# not by a Web slot, so the plugin needs both halves mounted as one loader row:
+# the Host half owns the restart route, the browser half appends the button.
+- insert:
+    - id: dsh-titlebar-restart
+      name: dsh-titlebar-restart

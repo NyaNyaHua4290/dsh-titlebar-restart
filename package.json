@@ -1,0 +1,54 @@
+{
+  "name": "dsh-titlebar-restart",
+  "version": "0.1.0",
+  "description": "仅 Windows 桌面版。在 DSH 窗口标题栏菜单（应用 / 编辑）后加一个「重启」项，连点两次即由 WMI 拉起的 PowerShell 脚本结束应用并重新启动同一个可执行文件。",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "restart",
+    "titlebar",
+    "windows"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "README.en.md",
+    "LICENSE",
+    "screenshots.json",
+    "assets"
+  ],
+  "engines": {
+    "node": ">=22",
+    "dsh": ">=0.2.1-rc.1"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": []
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NyaNyaHua4290/dsh-titlebar-restart.git"
+  },
+  "homepage": "https://github.com/NyaNyaHua4290/dsh-titlebar-restart#readme",
+  "bugs": {
+    "url": "https://github.com/NyaNyaHua4290/dsh-titlebar-restart/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
